@@ -1,0 +1,14 @@
+name: mental-health-checkin
+version: 1.0.0
+label: Mental Health Check-In
+description: A simple mental health check-in plugin for tracking daily mood and notes.
+  Features streak tracking, mood history visualization, and export functionality.
+author: Hermes Agent Contributor
+icon: "\U0001F9E0"
+type: tab
+permissions:
+- storage
+- memory
+backend: backend.py
+frontend: frontend.js
+css: styles.css
