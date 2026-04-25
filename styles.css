@@ -1,0 +1,284 @@
+/* Mental Health Check-In Plugin Styles */
+
+.mh-plugin {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.mh-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+}
+
+.mh-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.mh-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.mh-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mh-stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.mh-stat-label {
+    font-size: 0.8rem;
+    color: var(--muted-foreground);
+    text-transform: uppercase;
+}
+
+.mh-checkin-form {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    margin-bottom: 30px;
+}
+
+.mh-checkin-form h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.mh-mood-selector {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.mh-mood-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--background);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 80px;
+}
+
+.mh-mood-btn:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.mh-mood-btn.selected {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: var(--primary-foreground);
+}
+
+.mh-emoji {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.mh-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.mh-note-input {
+    margin-bottom: 20px;
+}
+
+.mh-note-input textarea {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--background);
+    color: var(--foreground);
+    font-family: inherit;
+    resize: vertical;
+}
+
+.mh-submit-btn, .mh-export-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--primary);
+    color: var(--primary-foreground);
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.mh-submit-btn:hover:not(:disabled), .mh-export-btn:hover {
+    opacity: 0.9;
+}
+
+.mh-submit-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.mh-history {
+    margin-top: 30px;
+}
+
+.mh-history h3 {
+    margin-bottom: 20px;
+}
+
+.mh-chart {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 150px;
+}
+
+.mh-empty {
+    text-align: center;
+    color: var(--muted-foreground);
+    padding: 40px;
+}
+
+.mh-bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 150px;
+    gap: 10px;
+}
+
+.mh-bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+}
+
+.mh-bar {
+    width: 100%;
+    background: var(--primary);
+    border-radius: var(--radius) var(--radius) 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5px;
+    min-height: 20px;
+    transition: height 0.3s ease;
+}
+
+.mh-bar-emoji {
+    font-size: 1.2rem;
+}
+
+.mh-bar-date {
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: var(--muted-foreground);
+}
+
+.mh-checkins-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mh-checkin-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.mh-checkin-emoji {
+    font-size: 1.5rem;
+}
+
+.mh-checkin-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mh-checkin-mood {
+    font-weight: 600;
+}
+
+.mh-checkin-note {
+    font-size: 0.9rem;
+    color: var(--muted-foreground);
+}
+
+.mh-checkin-date {
+    font-size: 0.8rem;
+    color: var(--muted-foreground);
+}
+
+.mh-export-btn {
+    width: 100%;
+}
+
+.mh-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    z-index: 9999;
+    animation: slideIn 0.3s ease;
+}
+
+.mh-notification-success {
+    background: #10b981;
+}
+
+.mh-notification-error {
+    background: #ef4444;
+}
+
+.mh-notification.fade-out {
+    animation: fadeOut 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,30 @@
+# Data files (contains user data)
+data/
+*.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Screenshots (user should add their own)
+screenshots/*.png
+!screenshots/.gitkeep
